@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:NaTruTraveller.ViewModels"
+             x:Class="NaTruTraveller.PostDetailsPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <vm:PostDetailsVM x:Key="vm"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save"
+                     Command="{Binding Source={StaticResource vm}, Path=UpdateCommand}"
+                     CommandParameter="{Binding Source={x:Reference descriptionEntry}, Path=Text}"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="descriptionEntry"/>
+            <Button x:Name="deleteButton"
+                    Text="Delete"
+                    Command="{Binding Source={StaticResource vm}, Path=DeleteCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

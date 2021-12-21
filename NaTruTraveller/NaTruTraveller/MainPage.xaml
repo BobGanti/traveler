@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NaTruTraveller.MainPage">
+
+    <StackLayout VerticalOptions="Start">
+        <StackLayout BackgroundColor="LightSalmon" Padding="0,0,0,5">
+            <Label Text="Shopper Delivery App" HorizontalTextAlignment="Center" TextColor="DarkBlue" FontSize="30"/>
+            <Label HorizontalTextAlignment="Center" TextColor="Brown" FontSize="Title">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+        <StackLayout Padding="25,75,25,0">
+            <Image x:Name="iconImage"
+                   Aspect="AspectFit"
+                   HorizontalOptions="FillAndExpand"
+                   Margin="0,0,0,50"
+                   HeightRequest="100"/>
+            <Entry x:Name="emailEntry"
+                   Keyboard="Email"
+                   Placeholder="Email"/>
+
+            <Entry x:Name="passwordEntry" 
+                   IsPassword="True"
+                   Placeholder="password"/>
+
+            <Button x:Name="loginButton" 
+                Text="Login"
+                Clicked="LoginButton_Clicked"
+                Style="{StaticResource defaultButton}"/>
+        </StackLayout>
+       
+    </StackLayout>
+
+</ContentPage>

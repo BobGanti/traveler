@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NaTruTraveller.App">
+    <Application.Resources>
+        <Color x:Key="blueColor">#1f90ff</Color>
+        <Color x:Key="whiteColor">#ffffff</Color>
+        <Color x:Key="purpleColor">#762934</Color>
+
+        <Style x:Key="defaultButton" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource blueColor}"/>
+            <Setter Property="TextColor" Value="{StaticResource whiteColor}"/>
+        </Style>
+    </Application.Resources>
+</Application>
